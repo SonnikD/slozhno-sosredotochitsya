@@ -1,5 +1,346 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-size: var(--base-font-size, 18px);
+  background: var(--main-background-color) var(--background-image) no-repeat
+    center / cover fixed;
+  color: var(--accent-color);
+  line-height: var(--line-height);
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+  min-height: 668px;
+  block-size: 100vh;
+  inline-size: 100%;
+  position: relative;
+}
+
+.header__decorated-element {
+  --line-height: 139.889%;
+
+  position: absolute;
+  display: flex;
+  align-items: center;
+  line-height: var(--line-height);
+  top: 20px;
+  right: 47px;
+}
+
+.header__decorated-element::before {
+  content: "";
+  position: absolute;
+  block-size: 9px;
+  inline-size: 9px;
+  inset-inline-end: -18px;
+  inset-block-end: 8px;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 3px currentColor;
+  border-radius: 50%;
+}
+
+.decorated-zone::before {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  content: "";
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  block-size: 25px;
+  inline-size: 25px;
+}
+
+.decorated-zone::after {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  content: "";
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+  block-size: 25px;
+  inline-size: 25px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  --line-height: 100%;
+
+  background-color: transparent;
+  border: 0;
+  text-transform: lowercase;
+  font-family: "IBM Plex Mono", "Courier New", monospace;
+  font-weight: var(--regular-font-weight);
+  padding-inline: 13px;
+  padding-block: 1.5px;
+  line-height: var(--line-height);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+  pointer-events: none;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--hover-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--accent-color);
+}
+
+.header__title {
+  --line-height: 82.5%;
+
+  font-size: var(--title-font-size-desktop);
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--header-shadow-color);
+  line-height: var(--line-height);
+  margin-inline: -20px;
+}
+
+.header__text {
+  background-color: var(--title-decor);
+  color: var(--header-text-color);
+  font-weight: var(--bold-font-weight);
+  justify-self: end;
+  align-self: center;
+  max-inline-size: 50%;
+}
+
+.main {
+  display: grid;
+  padding-inline: var(--padding-large);
+  padding-block-start: 60px;
+  gap: 80px;
+}
+
+.main,
+.footer {
+  background-color: var(--main-background-color);
+}
+
+.focus-improvement,
+.focus-difficulty,
+.focus-reducers {
+  display: grid;
+  gap: 20px;
+}
+
+.focus-improvement,
+.focus-difficulty {
+  grid-template-columns: 32% 2fr;
+}
+
+.focus__rows {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.focus__columns {
+  display: grid;
+  gap: 20px;
+}
+
+.focus-reducers .focus__title {
+  display: grid;
+  grid-template-columns: 32% 2fr;
+}
+
+.focus__title {
+  font-weight: var(--bold-font-weight);
+}
+
+.subtitle {
+  color: var(--subtitle-color);
+  background-color: var(--title-decor);
+}
+
+.focus__sub-subtitle {
+  font-weight: var(--regular-font-weight);
+}
+
+.focus__text {
+  color: var(--main-text-color);
+  padding-block-start: 10px;
+}
+
+.main__link {
+  text-shadow: 2px 2px 0 var(--title-decor);
+  text-decoration: none;
+}
+
+.main__link:hover {
+  border-block-end: 1px solid var(--hover-color);
+}
+
+.main__link:focus {
+  outline: none;
+}
+
+.main__link:focus-visible {
+  border: 1px solid var(--main-text-color);
+}
+
+.gallery {
+  display: grid;
+  gap: 20px;
+}
+
+.gallery__images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "sunset sunset ice-cream"
+    "tape books ice-cream"
+    "tape street street";
+  gap: 20px;
+  padding-block-end: 60px;
+}
+
+.gallery__image {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+.sunset {
+  grid-area: sunset;
+}
+
+.ice-cream {
+  grid-area: ice-cream;
+}
+
+.tape {
+  grid-area: tape;
+}
+
+.books {
+  grid-area: books;
+}
+
+.street {
+  grid-area: street;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  block-size: 100vh;
+  inline-size: 100%;
+  min-height: 668px;
+}
+
+.footer__title {
+  font-size: var(--title-font-size-desktop);
+  text-shadow: 2px 2px 0 var(--title-decor);
+  color: var(--title-color);
+  font-weight: var(--bold-font-weight);
+}
+
+@media (width <= 768px) {
+  .header__theme-menu {
+    align-self: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .focus__rows {
+    grid-template-columns: 100%;
+  }
+}
+
+@media (width <= 600px) {
+  .header__title {
+    font-size: var(--title-font-size-mobile);
+    margin-inline: 0;
+  }
+
+  .header__text {
+    justify-self: start;
+    max-inline-size: 100%;
+  }
+
+  .footer__title {
+    font-size: var(--title-font-size-mobile);
+  }
+
+  .focus-improvement,
+  .focus-difficulty,
+  .focus-reducer {
+    grid-template-columns: 100%;
+  }
+
+  .focus-reducers .focus__title {
+    grid-template-columns: 100%;
+  }
+
+  .gallery__images {
+    width: 100%;
+    gap: 10px;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "sunset"
+      "ice-cream"
+      "tape"
+      "books"
+      "street";
+  }
+
+  .gallery {
+    gap: 10px;
+  }
+
+  .gallery__images {
+    padding-block-end: 40px;
+  }
+
+  .main {
+    padding-block-start: 40px;
+    padding-inline: var(--padding-small);
+    gap: 50px;
+  }
+}
+
+@media (width <= 375px) {
+  .header {
+    padding-inline: 10px;
+    padding-block: 10px;
+  }
+
+  .decorated-zone::before {
+    top: 10px;
+    right: 10px;
+  }
+
+  .decorated-zone::after {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .header__decorated-element {
+    top: 10px;
+    right: 37px;
+  }
+}
+
+@media (width > 375px) {
+  .header {
+    padding-inline: var(--padding-large);
+    padding-block: var(--padding-large);
+  }
 }
