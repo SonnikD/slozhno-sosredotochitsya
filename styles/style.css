@@ -34,7 +34,7 @@
   inset-inline-end: -18px;
   inset-block-end: 8px;
   background-color: var(--accent-color);
-  box-shadow: 0 0 4px 3px var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
   border-radius: 50%;
 }
 

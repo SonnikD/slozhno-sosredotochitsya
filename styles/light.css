@@ -35,6 +35,10 @@
     --hover-color: rgba(50, 49, 45, 0.4);
   }
 
+  .header__decorated-element {
+    display: none;
+  }
+
   @media (min-width: 1024px) {
     .page {
       --header-shadow-color: #ff0070;
