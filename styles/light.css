@@ -11,6 +11,10 @@
   --hover-color: rgba(50, 49, 45, 0.4);
 }
 
+.page.theme_light .header__decorated-element {
+  display: none;
+}
+
 @media (min-width: 1024px) {
   .page.theme_light {
     --header-shadow-color: #ff0070;
