@@ -134,10 +134,13 @@
   grid-template-columns: 32% 2fr;
 }
 
-.section__rows {
+.section__list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+.section__rows {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .section__columns {
