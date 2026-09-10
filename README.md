@@ -4,7 +4,7 @@
 
 ## Макет
 
-[Ссылка](https://www.figma.com/design/QHcvX1RsUI89CulRB7HLk6/-4-Посмотри-в-окно?node-id=0-1&p=f)
+[Ссылка](https://www.figma.com/design/lCqDbWjgllgJtb2hmCqfyX/-6-Сложно-сосредоточиться?node-id=0-1)
 
 ## Скриншоты
 
